@@ -14,6 +14,25 @@ class GenresController extends Controller
         $this->genres = new Genres();
     }
 
+    /**
+	 * List genres
+     * 
+     * List all the movie genres
+     * @queryParam id int The genre id. If provided, the application will return just one position in "genres" array: the found (or not) genre
+     * @response {
+     *    "genres": [
+     *        {
+     *            "id": 28,
+     *            "name": "Action"
+     *        },
+     *        {
+     *            "id": 12,
+     *            "name": "Adventure"
+     *        },
+     *        ...
+     *    ]
+     *}
+	 */
     public function get(Request $request){
         $result = $this->genres->list();
 
