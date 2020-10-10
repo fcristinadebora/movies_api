@@ -41,7 +41,7 @@ Construção/integração com APIs REST (JSON e XML). Também já fiz integraç�
 Nunca trabalhei com testes unitários. Estava no meu radar de estudos, principalmente para implementação no meu TCC. Aproveitei o desafio técnico e tentei implementar algo simples. Sei que o design de testes vai muito além, mas garantir que uma alteração não quebrou algum endpoint já ajuda.
 
 - [] Docker
-Somente com imagens já prontas, nunca construí uma imagem ou containeres do 0
+Somente com imagens já prontas, nunca construí uma imagem ou containeres do 0. Aproveitei o desafio para tentar colocar a aplicação em uma imagem docker.
 
 - [ ] DevOps
 - [X] Self-learn
