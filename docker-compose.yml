@@ -1,0 +1,33 @@
+version: "3.8"
+services:
+  app:
+    build:
+      args:
+        user: generic-user
+        uid: 1000
+      context: ./
+      dockerfile: Dockerfile
+    image: movies_api
+    container_name: movies_api-app
+    restart: unless-stopped
+    working_dir: /var/www/
+    volumes:
+      - ./:/var/www
+    networks:
+      - movies_api
+
+  nginx:
+    image: nginx:alpine
+    container_name: movies_api-nginx
+    restart: unless-stopped
+    ports:
+      - 8000:80
+    volumes:
+      - ./:/var/www
+      - ./docker-compose/nginx:/etc/nginx/conf.d/
+    networks:
+      - movies_api
+
+networks:
+  movies_api:
+    driver: bridge
