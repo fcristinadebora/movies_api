@@ -15,7 +15,7 @@ cp .env.example .env
 ```
 php artisan key:generate
 ```
-Set up your TMDB API KEY at TMDB_API_KEY .env file! 
+Set up your TMDB API KEY at TMDB_API_KEY in .env file! 
 
 ### Run development server
 ```
