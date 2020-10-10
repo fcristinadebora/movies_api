@@ -1,6 +1,7 @@
 ### Presentation
 - [ ] About team
 - [x] About CompuFour
+
 Sobre a Compufour, sei que é uma empresa concordiense, atuando há 25 anos com desenvolvimento de software para gerenciamento micro e pequenas empresas. Inicialmente, os softwares eram desktops (software de caixinha), desenvolvidos em Delphi, porém a evolução tecnológica desenvolveu a necessidade de soluções baseadas na nuvem. Recentemente, foi vendida para uma empresa Italiana. 
 
 ### Skills/experiences to ask to candidate
