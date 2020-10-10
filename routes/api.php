@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\Api\MoviesController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -14,6 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('upcoming', [MoviesController::class, 'upcoming'])->name('movies.upcoming');
+Route::get('top-rated', [MoviesController::class, 'topRated'])->name('movies.top-rated');
+Route::get('{movieId}', [MoviesController::class, 'find'])->name('movies.find');
