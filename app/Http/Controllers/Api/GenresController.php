@@ -18,13 +18,16 @@ class GenresController extends Controller
         $result = $this->genres->list();
 
         if($request->get('id')){
-            foreach($result->genres as $genre){
-                if($genre->id == $request->get('id')){
-                    return response()->json(['genre' => $genre], 200);
+            $genre = null;
+
+            foreach($result->genres as $genreItem){
+                if($genreItem->id == $request->get('id')){
+                    $genre = $genreItem;
+                    continue;
                 }
             }
 
-            return response()->json(['genre' => null], 200);
+            $result->genres = [$genre];
         }
 
         return response()->json($result, 200);
